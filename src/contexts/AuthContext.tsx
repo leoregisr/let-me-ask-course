@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup } from "@firebase/auth";
+import { signInWithPopup } from "@firebase/auth";
 import { createContext, ReactNode, useEffect, useState } from "react";
 import { auth, authProvider } from "../services/firebase";
 
@@ -57,7 +57,6 @@ export function AuthContextProvider(props: AuthProviderPropsType) {
       })
     }
   }
-
 
   return (
     <AuthContext.Provider value={{ isSigned: !!user, user, signInWithGoogle }}>
