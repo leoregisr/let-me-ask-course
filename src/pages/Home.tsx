@@ -15,7 +15,7 @@ import { get } from '@firebase/database';
 export function Home() {
   const history = useHistory();
   const { user, signInWithGoogle } = useAuthContext();
-  const [roomCode, setRoomCode] = useState('');
+  const [ roomCode, setRoomCode] = useState('');
 
   async function handleCreateNewRoom() {
     if (!user) {

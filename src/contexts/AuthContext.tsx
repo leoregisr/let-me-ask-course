@@ -11,7 +11,7 @@ type AuthProviderPropsType = {
 type User = {
   id: string,
   name: string,
-  profileImageUrl: string
+  avatar: string
 }
 
 type AuthContextData = {
@@ -34,8 +34,8 @@ export function AuthContextProvider(props: AuthProviderPropsType) {
 
         setUser({
           id: uid,
-          name: displayName,
-          profileImageUrl: photoURL
+          name: displayName,          
+          avatar: photoURL
         })
       }
     });
@@ -52,8 +52,8 @@ export function AuthContextProvider(props: AuthProviderPropsType) {
     if (result.user && result.user.displayName && result.user.photoURL) {
       setUser({
         id: result.user.uid,
-        name: result.user.displayName,
-        profileImageUrl: result.user.photoURL
+        name: result.user.displayName,        
+        avatar: result.user.photoURL
       })
     }
   }
